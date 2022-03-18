@@ -4,6 +4,7 @@
   "description": "",
   "main": "Lab20.js",
   "scripts": {
+    "start": "node Lab20.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "valeriasmelova",
