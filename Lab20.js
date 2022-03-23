@@ -71,8 +71,21 @@ app.post('/delete', (req, res) => {
     disabled: false,
     upd: false,
     add: true
-
   })
 })
+
+app.get('/update', (req, res)=>{
+  res.render('main.hbs', {
+    layout:null,
+    notes: DB.GetAll(),
+    disabled: true,
+    upd: true,
+    add: false
+  })
+})
+// app.post('/updateOne', (req, res) => {
+//   const man = {name: req.body.name, number: req.body.number}
+//   res.send(man);
+// })
 
 app.listen(process.env.PORT || 5000)

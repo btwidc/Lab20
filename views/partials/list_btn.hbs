@@ -1,4 +1,20 @@
-<input type="button" class="block-button"
-onclick="window.location='/update'" value="{{name}}  {{number}}">
-    
-</button>
+<input type="button" class="block-button" onclick="document.location = '/update?name={{name}}&number={{number}}';
+<!--    fetch('/updateOne', {-->
+<!--        method: 'POST',-->
+<!--        headers: {'Content-Type':'application/json','Accept':'text/html'},-->
+<!--        body: JSON.stringify({name: `{{name}}`, number: `{{number}}` })-->
+<!--        })-->
+<!--        .then((result) => {-->
+<!--        return result.json();-->
+<!--        })-->
+<!--        .then((body) => {-->
+
+<!--        console.log(body.name);-->
+<!--        console.log(body.number);-->
+<!--        window.onload = () => {-->
+<!--        document.getElementById('name').setAttribute('value', body.name);-->
+<!--        document.getElementById('number').setAttribute('value', body.number);-->
+<!--        }-->
+<!--        })-->
+        " value="{{name}}  {{number}}">
+

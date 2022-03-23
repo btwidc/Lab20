@@ -26,8 +26,10 @@ function Edit() {
                     headers: {'Content-Type':'application/json','Accept':'text/html'},
                     body: JSON.stringify({name: name, number: number})
     })
-    .then(response => {return response.text() })
+    .then(response => {return response.text()})
     .then((body) => {
+        name = body.name;
+        number = body.number;
         var newHTML = document.open("text/html", "replace"); 
         newHTML.write(body); 
         newHTML.close(); 
