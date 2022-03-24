@@ -13,9 +13,10 @@
             {{#if disabled}}
                 <script>
                     $(document).ready(function () {
-                        $("input.block-button").attr("disabled", true);
+                        $(".submit-button-del").attr("disabled", true);
                     })
                 </script>
+
                 <div class="notes-container">
                     {{#each notes}}
                         {{> list_btn}}
@@ -36,6 +37,13 @@
                     {{> add_btn}}
                 {{/if}}
                 {{#if upd}}
+                    {{#if disabled}}
+                            <script>
+                                $(document).ready(function () {
+                                    $(".submit-button-del").attr("disabled", false);
+                                })
+                            </script>
+                        {{/if}}
                 {{> update_block}}
                 {{/if}}
                 {{#if add}}

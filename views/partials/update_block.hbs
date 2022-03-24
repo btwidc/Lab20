@@ -18,15 +18,31 @@
         document.getElementById('name').value = name;
         document.getElementById('number').value = number;
     }
+
+</script>
+<script>
+    const changeUp = () => {
+        $(document).ready(function () {
+            $(".submit-button-del").attr("disabled", true);
+            document.getElementsByClassName('submit-button-del')[0].style.opacity='0.5';
+        })
+    }
+    // const changeDown = () => {
+    //     window.onload = () => {
+    //             document.getElementsByClassName('submit-button-del').attr("disabled", false);
+    //
+    //     }
+    // }
 </script>
 
 <div class="add-form">
     <input type="text" id="name" class="form-input" placeholder="Name" pattern="^[a-zA-Z ,.'-]+$">
-    <input type="text" id="number" class="form-input" placeholder="Telephone" pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$">
+    <input type="text" id="number" class="form-input" onkeyup="changeUp()" placeholder="Telephone" pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$">
 </div>
 <div class="form-submit">
     <button class="submit-button" onclick="Edit()">Update</button>
-    <button class="submit-button" onclick="Delete()">Delete</button>
+    <button class="submit-button-del" onclick="
+    Delete()">Delete</button>
     {{#reject}}
     {{/reject}}
 </div>

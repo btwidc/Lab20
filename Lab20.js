@@ -78,7 +78,7 @@ app.get('/update', (req, res)=>{
   res.render('main.hbs', {
     layout:null,
     notes: DB.GetAll(),
-    disabled: true,
+    disabled: false,
     upd: true,
     add: false
   })
